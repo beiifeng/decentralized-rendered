@@ -1,0 +1,5 @@
+packages:
+  - "packages/*"
+  - "sites/*"
+
+minimumReleaseAge: 1440

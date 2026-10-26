@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --default-font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color: #242424;
+  background-color: rgb(255, 253, 253);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.opc-tab-selected {
+  @apply border border-gray-200 border-b-0 rounded-t-sm relative bg-gray-50;
+}
+
+.opc-tab-selected::after {
+  content: " ";
+  @apply absolute border-l border-l-gray-200 border-r border-r-gray-200 shadow-gray-50;
+  top: 0;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  box-shadow: inset 0 -2px 0 var(--tw-shadow-color);
+}
+
+.scrollbar-stable {
+  scrollbar-gutter: stable;
+}
+
+.editor-toggle-btn {
+  transform: translate(-50%, 50%) rotate(90deg);
+  transform-origin: right center;
+  @apply cursor-pointer bg-gray-100 px-0.5 py-4 rounded-l-sm;
+}
+
+.editor-toggle-btn:hover {
+  @apply bg-gray-200 px-1 py-5;
+}

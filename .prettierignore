@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.nuxt/
+.output/
+out/
+vendor/
+*.min.js
+*.min.css
+*.map
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+deps/

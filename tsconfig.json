@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2023",
+    "lib": ["esnext", "dom"],
+    "jsx": "react-jsx",
+
+    "sourceMap": false,
+    "declaration": true,
+    "incremental": false,
+    "removeComments": false,
+
+    "strict": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+
+    "paths": {
+      "@beiifeng/trustvc-host-provider": ["./packages/host-provider/lib"],
+      "@beiifeng/trustvc-host-provider/*": ["./packages/host-provider/lib/*"]
+    }
+  },
+  "exclude": ["**/.*/", "**/build", "**/node_modules", "**/dist"]
+}
