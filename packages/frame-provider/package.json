@@ -1,5 +1,5 @@
 {
-  "name": "@beiifeng/trustvc-frame-provider",
+  "name": "@beiifeng/decentralized-frame-provider",
   "version": "1.0.0-alpha.1",
   "private": false,
   "type": "module",
@@ -16,12 +16,9 @@
     "lint": "eslint ./lib/**/*.{ts,tsx,js,jsx}"
   },
   "keywords": [
-    "trustvc",
-    "opencerts",
     "frame-provider"
   ],
-  "author": "YiFei Wang <beiifeng@hotmail.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "peerDependencies": {
     "react": "^18.0.0 | ^19.0.0"
   },

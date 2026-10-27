@@ -1,4 +1,4 @@
-import { HostProvider, type FrameActions, type HostActions, type HostActionsPayload } from "@beiifeng/trustvc-host-provider";
+import { HostProvider, type FrameActions, type HostActions, type HostActionsPayload } from "@beiifeng/decentralized-host-provider";
 import clsx from "clsx";
 import React, { useCallback, useEffect, useImperativeHandle, useRef, useState } from "react";
 import type { RawDocument } from "./interface";

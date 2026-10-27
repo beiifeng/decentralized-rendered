@@ -16,12 +16,12 @@
     "strictNullChecks": true,
 
     "paths": {
-      "@beiifeng/trustvc-host-provider": ["./packages/host-provider/lib"],
-      "@beiifeng/trustvc-host-provider/*": ["./packages/host-provider/lib/*"],
-      "@beiifeng/trustvc-frame-provider": ["./packages/frame-provider/lib"],
-      "@beiifeng/trustvc-frame-provider/*": ["./packages/frame-provider/lib/*"],
-      "@beiifeng/trustvc-penpal-v5-adapter": ["./packages/penpal-v5-adapter/lib"],
-      "@beiifeng/trustvc-penpal-v5-adapter/*": ["./packages/penpal-v5-adapter/lib/*"]
+      "@beiifeng/decentralized-host-provider": ["./packages/host-provider/lib"],
+      "@beiifeng/decentralized-host-provider/*": ["./packages/host-provider/lib/*"],
+      "@beiifeng/decentralized-frame-provider": ["./packages/frame-provider/lib"],
+      "@beiifeng/decentralized-frame-provider/*": ["./packages/frame-provider/lib/*"],
+      "@beiifeng/decentralized-penpal-v5-adapter": ["./packages/penpal-v5-adapter/lib"],
+      "@beiifeng/decentralized-penpal-v5-adapter/*": ["./packages/penpal-v5-adapter/lib/*"]
     }
   },
   "exclude": ["**/.*/", "**/build", "**/node_modules", "**/dist"]

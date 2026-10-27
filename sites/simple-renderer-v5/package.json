@@ -1,5 +1,5 @@
 {
-  "name": "@beiifeng/trustvc-simple-renderer-v5",
+  "name": "@beiifeng/decentralized-simple-renderer-v5",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,9 +10,10 @@
     "lint": "eslint ./src/**/*.{ts,tsx,js,jsx}",
     "preview": "vite preview"
   },
+  "license": "Apache-2.0",
   "dependencies": {
-    "@beiifeng/trustvc-frame-provider": "workspace:*",
-    "@beiifeng/trustvc-penpal-v5-adapter": "workspace:*",
+    "@beiifeng/decentralized-frame-provider": "workspace:*",
+    "@beiifeng/decentralized-penpal-v5-adapter": "workspace:*",
     "clsx": "^2.1.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"

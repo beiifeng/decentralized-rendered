@@ -87,7 +87,7 @@ function getData<T>(obj: any): T {
   } else if (obj.$template) {
     return deepMap(obj, unSalt);
   } else {
-    throw new Error("Invalid OpenCerts data format.");
+    throw new Error("Invalid data format.");
   }
 }
 

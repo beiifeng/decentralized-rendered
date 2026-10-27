@@ -1,4 +1,4 @@
-import type { Dispatcher, HostActions, PenpalAdapter } from "@beiifeng/trustvc-frame-provider";
+import type { Dispatcher, HostActions, PenpalAdapter } from "@beiifeng/decentralized-frame-provider";
 import { connectToParent, ErrorCode } from "penpal";
 
 export function penpalAdapter(options: { methods: Record<string, any>; timeout?: number }) {

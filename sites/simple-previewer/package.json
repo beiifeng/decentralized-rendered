@@ -1,5 +1,5 @@
 {
-  "name": "@beiifeng/trustvc-simple-previewer",
+  "name": "@beiifeng/decentralized-simple-previewer",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,8 +10,9 @@
     "lint": "eslint ./src/**/*.{ts,tsx,js,jsx}",
     "preview": "vite preview"
   },
+  "license": "MIT",
   "dependencies": {
-    "@beiifeng/trustvc-host-provider": "workspace:*",
+    "@beiifeng/decentralized-host-provider": "workspace:*",
     "clsx": "^2.1.1",
     "monaco-editor": "^0.57.0",
     "react": "^19.3.1",

@@ -1,5 +1,5 @@
 {
-  "name": "@beiifeng/trustvc-decentralized-rendered",
+  "name": "@beiifeng/decentralized-rendered",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -10,8 +10,7 @@
     "clean": "pnpm -r exec rimraf ./dist"
   },
   "keywords": [
-    "trustvc",
-    "opencerts"
+    "decentralized"
   ],
   "author": "YiFei Wang <beiifeng@hotmail.com>",
   "license": "MIT",

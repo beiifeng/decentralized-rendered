@@ -1,1 +1,1 @@
-# A simple previewer
+# A simple decentralized previewer

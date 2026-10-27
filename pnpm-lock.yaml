@@ -186,7 +186,7 @@ importers:
         specifier: ^4.1.1
         version: 4.1.1
     devDependencies:
-      '@beiifeng/trustvc-frame-provider':
+      '@beiifeng/decentralized-frame-provider':
         specifier: workspace:*
         version: link:../frame-provider
 
@@ -196,13 +196,13 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0
     devDependencies:
-      '@beiifeng/trustvc-frame-provider':
+      '@beiifeng/decentralized-frame-provider':
         specifier: workspace:*
         version: link:../frame-provider
 
   sites/simple-previewer:
     dependencies:
-      '@beiifeng/trustvc-host-provider':
+      '@beiifeng/decentralized-host-provider':
         specifier: workspace:*
         version: link:../../packages/host-provider
       clsx:
@@ -224,10 +224,10 @@ importers:
 
   sites/simple-renderer-v5:
     dependencies:
-      '@beiifeng/trustvc-frame-provider':
+      '@beiifeng/decentralized-frame-provider':
         specifier: workspace:*
         version: link:../../packages/frame-provider
-      '@beiifeng/trustvc-penpal-v5-adapter':
+      '@beiifeng/decentralized-penpal-v5-adapter':
         specifier: workspace:*
         version: link:../../packages/penpal-v5-adapter
       clsx:

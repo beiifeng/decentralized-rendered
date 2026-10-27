@@ -1,5 +1,5 @@
 {
-  "name": "@beiifeng/trustvc-host-provider",
+  "name": "@beiifeng/decentralized-host-provider",
   "version": "1.0.0-alpha.1",
   "private": false,
   "type": "module",
@@ -16,12 +16,9 @@
     "lint": "eslint ./lib/**/*.{ts,tsx,js,jsx}"
   },
   "keywords": [
-    "trustvc",
-    "opencerts",
-    "host-provider"
+    "decentralized-host-provider"
   ],
-  "author": "YiFei Wang <beiifeng@hotmail.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "penpal": "^8.0.1",
     "penpal-v4": "npm:penpal@^4.1.1",

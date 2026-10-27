@@ -1,5 +1,5 @@
-import { FrameProvider } from "@beiifeng/trustvc-frame-provider";
-import penpalAdapter from "@beiifeng/trustvc-penpal-v5-adapter";
+import { FrameProvider } from "@beiifeng/decentralized-frame-provider";
+import penpalAdapter from "@beiifeng/decentralized-penpal-v5-adapter";
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
