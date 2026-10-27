@@ -39,8 +39,8 @@ export function useHost(props: UseHostProps) {
   );
 
   useEffect(() => {
-    if (iframeRef?.current?.contentWindow && status === "disconnected" && source) {
-      const iframe = iframeRef.current;
+    const iframe = iframeRef.current;
+    if (iframe?.contentWindow && status === "disconnected" && source) {
       const connectionV8 = connectV8({
         messenger: new WindowMessengerV8({ remoteWindow: iframe.contentWindow!, allowedOrigins: [new URL(source).origin] }),
         methods,
@@ -52,12 +52,12 @@ export function useHost(props: UseHostProps) {
         timeout: TIMEOUT,
       });
       const connectionV6 = connectToChildV6({
-        iframe: iframeRef.current,
+        iframe: iframe,
         methods,
         timeout: TIMEOUT,
       });
       const connectionV4 = connectToChildV4({
-        iframe: iframeRef.current,
+        iframe: iframe,
         methods,
         timeout: TIMEOUT,
       });
@@ -92,15 +92,6 @@ export function useHost(props: UseHostProps) {
             setStatus("disconnected");
           }
         });
-
-      return () => {
-        connectionV8.destroy();
-        connectionV7.destroy();
-        connectionV6.destroy();
-        connectionV4.destroy();
-        setStatus("disconnected");
-        onConnected(null);
-      };
     }
   }, [source, iframeRef, methods, onConnected, status]);
 

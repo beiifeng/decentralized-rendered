@@ -56,7 +56,7 @@ function recursivelyApply(iteratee: (value: any) => any): (value: any) => any {
 }
 
 function map(array: any, iteratee: (value: any) => any): any[] {
-  const result = [];
+  const result: any[] = [];
   for (const item of array) {
     result.push(iteratee(item));
   }

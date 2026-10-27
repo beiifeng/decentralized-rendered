@@ -4,6 +4,6 @@
     "rootDir": "./lib",
     "outDir": "./dist"
   },
-  "include": ["lib/**/*", "deps/**/*"],
+  "include": ["lib/**/*"],
   "exclude": ["node_modules", "dist", "**/*.spec.ts", "e2e"]
 }
