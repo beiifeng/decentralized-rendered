@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import ConnectionFailureTemplate from "./connection-failure.template";
-import type { Dispatch, FrameActions, HostActions } from "./types";
+import type { Dispatcher, FrameActions, HostActions } from "./types";
 import { useHost } from "./use-host";
 
 export type HostProviderProps = {
   source: string | undefined;
-  dispatch: Dispatch<HostActions>;
-  onConnected: (frameDispatcher: Dispatch<FrameActions> | null) => void;
+  dispatch: Dispatcher<HostActions>;
+  onConnected: (frameDispatcher: Dispatcher<FrameActions> | null) => void;
   className?: string;
   style?: CSSProperties;
   id?: string;

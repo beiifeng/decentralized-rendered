@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import type { Dispatch, FrameActions, HostActions, PenpalAdapter } from "./types";
+import type { Dispatcher, FrameActions, HostActions, PenpalAdapter } from "./types";
 
 const TIMEOUT = 5000;
 
 export type UseFrameProps = {
   penpalAdapter: PenpalAdapter;
-  dispatch: Dispatch<FrameActions>;
-  onConnected: (hostDispatcher: Dispatch<HostActions> | null) => void;
+  dispatch: Dispatcher<FrameActions>;
+  onConnected: (hostDispatcher: Dispatcher<HostActions> | null) => void;
 };
 
 export function useFrame(props: UseFrameProps) {
@@ -23,7 +23,7 @@ export function useFrame(props: UseFrameProps) {
       });
 
       connection.promise
-        .then((host: { dispatch: Dispatch<HostActions> }) => {
+        .then((host: { dispatch: Dispatcher<HostActions> }) => {
           setStatus("connected");
           onConnected(host.dispatch);
         })
@@ -35,12 +35,6 @@ export function useFrame(props: UseFrameProps) {
           }
           onConnected(null);
         });
-
-      return () => {
-        connection.destroy();
-        setStatus("disconnected");
-        onConnected(null);
-      };
     }
   }, [status, penpalAdapter, dispatch, onConnected]);
 

@@ -3,15 +3,15 @@ import { connectToChild as connectToChildV4 } from "penpal-v4";
 import { connectToChild as connectToChildV6 } from "penpal-v6";
 import { connect as connectV7, WindowMessenger as WindowMessengerV7 } from "penpal-v7";
 import { useEffect, useMemo, useRef, useState, type RefObject } from "react";
-import type { Dispatch, FrameActions, HostActions, HostActionsPayload } from "./types";
+import type { Dispatcher, FrameActions, HostActions, HostActionsPayload } from "./types";
 
 const TIMEOUT = 5000;
 
 export type UseHostProps = {
   source: string;
   iframeRef: RefObject<HTMLIFrameElement | null>;
-  dispatch: Dispatch<HostActions>;
-  onConnected: (frameDispatcher: Dispatch<FrameActions> | null) => void;
+  dispatch: Dispatcher<HostActions>;
+  onConnected: (frameDispatcher: Dispatcher<FrameActions> | null) => void;
 };
 
 export function useHost(props: UseHostProps) {

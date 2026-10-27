@@ -1,7 +1,7 @@
 import { type FunctionComponent, type PropsWithChildren, useCallback, useRef, useState } from "react";
 import DomListener from "./dom-listener";
 import noAttachmentFactory from "./no-attachment.factory";
-import type { Attachment, Dispatch, FrameActions, HostActions, PenpalAdapter, TemplateRegistry } from "./types";
+import type { Attachment, Dispatcher, FrameActions, HostActions, PenpalAdapter, TemplateRegistry } from "./types";
 import { useFrame } from "./use-frame";
 import { documentTemplates, noop } from "./utils";
 
@@ -20,13 +20,13 @@ export default function FrameProvider<D extends Record<string, unknown>>(props: 
 
   const [rawDocument, setRawDocument] = useState<Record<string, unknown>>();
   const [templateName, setTemplateName] = useState<string>();
-  const hostDispatcherRef = useRef<Dispatch<HostActions>>(noop);
+  const hostDispatcherRef = useRef<Dispatcher<HostActions>>(noop);
 
   const templates = document ? documentTemplates(document, templateRegistry as TemplateRegistry<D>, attachmentToComponent, useFallbackSource) : [];
   const templateSelected = templates.find((template) => template.id === templateName) || templates[0] || {};
   const Template = templateSelected.template;
 
-  const onConnected = useCallback((postMessage: Dispatch<HostActions> | null) => {
+  const onConnected = useCallback((postMessage: Dispatcher<HostActions> | null) => {
     hostDispatcherRef.current = postMessage || noop;
   }, []);
 
@@ -82,14 +82,16 @@ export default function FrameProvider<D extends Record<string, unknown>>(props: 
   return (
     <DomListener onUpdate={(height) => hostDispatcherRef.current({ type: "UPDATE_HEIGHT", payload: height })}>
       {document && connected && (
-        <Template
-          document={document}
-          wrappedDocument={rawDocument}
-          handleObfuscation={(field) => {
-            hostDispatcherRef.current({ type: "OBFUSCATE", payload: field });
-          }}
-          errorType={errorType}
-        />
+        <div className="frameless-tabs" id="rendered-certificate">
+          <Template
+            document={document}
+            wrappedDocument={rawDocument}
+            handleObfuscation={(field) => {
+              hostDispatcherRef.current({ type: "OBFUSCATE", payload: field });
+            }}
+            errorType={errorType}
+          />
+        </div>
       )}
     </DomListener>
   );

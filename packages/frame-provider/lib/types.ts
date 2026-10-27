@@ -23,10 +23,10 @@ export type Action<A, T = keyof A> = T extends keyof A ? (A[T] extends void ? { 
 export type HostActions = Action<HostActionsPayload>;
 export type FrameActions = Action<FrameActionsPayload>;
 
-export type Dispatch<A> = (action: A) => void;
+export type Dispatcher<A> = (action: A) => void;
 
 export interface PenpalAdapter {
-  (options: { methods: Record<string, unknown>; timeout?: number }): { promise: Promise<{ dispatch: Dispatch<HostActions> }>; destroy: () => void };
+  (options: { methods: Record<string, unknown>; timeout?: number }): { promise: Promise<{ dispatch: Dispatcher<HostActions> }>; destroy: () => void };
   ErrorCode: {
     ConnectionTimeout: string;
   };

@@ -1,0 +1,23 @@
+{
+  "name": "@beiifeng/trustvc-simple-renderer-v5",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "format": "prettier --write ./src/**/*.{ts,tsx,js,jsx,json}",
+    "lint": "eslint ./src/**/*.{ts,tsx,js,jsx}",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@beiifeng/trustvc-frame-provider": "workspace:*",
+    "@beiifeng/trustvc-penpal-v5-adapter": "workspace:*",
+    "clsx": "^2.1.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0"
+  }
+}

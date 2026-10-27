@@ -19,4 +19,4 @@ export type Action<A, T = keyof A> = T extends keyof A ? (A[T] extends void ? { 
 export type HostActions = Action<HostActionsPayload>;
 export type FrameActions = Action<FrameActionsPayload>;
 
-export type Dispatch<A> = (action: A) => void;
+export type Dispatcher<A> = (action: A) => void;

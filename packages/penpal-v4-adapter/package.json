@@ -1,0 +1,32 @@
+{
+  "name": "@beiifeng/trustvc-penpal-v4-adapter",
+  "version": "1.0.0-alpha.1",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*.js": "./dist/*.js",
+    "./*": "./dist/*.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write ./lib/**/*.{ts,tsx,js,jsx,json}",
+    "lint": "eslint ./lib/**/*.{ts,tsx,js,jsx}"
+  },
+  "keywords": [
+    "trustvc",
+    "opencerts",
+    "frame-provider",
+    "penpal"
+  ],
+  "author": "YiFei Wang <beiifeng@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "penpal": "^4.1.1"
+  },
+  "devDependencies": {
+    "@beiifeng/trustvc-frame-provider": "workspace:*"
+  }
+}
