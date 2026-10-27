@@ -1,0 +1,32 @@
+{
+  "name": "@beiifeng/trustvc-frame-provider",
+  "version": "1.0.0-alpha.1",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*.js": "./dist/*.js",
+    "./*": "./dist/*.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write ./lib/**/*.{ts,tsx,js,jsx,json}",
+    "lint": "eslint ./lib/**/*.{ts,tsx,js,jsx}"
+  },
+  "keywords": [
+    "trustvc",
+    "opencerts",
+    "frame-provider"
+  ],
+  "author": "YiFei Wang <beiifeng@hotmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0 | ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "react": "^19.3.1"
+  }
+}
